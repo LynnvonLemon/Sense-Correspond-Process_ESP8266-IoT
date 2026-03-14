@@ -1,0 +1,30 @@
+{
+  "wifi": {
+    "ssid": "WiFi网络名称",
+    "password": "WiFi密码"
+  },
+  "email": {
+    "smtp": {
+      "host": "smtp.163.com",
+      "port": 465
+    },
+    "account": {
+      "user": "your_email@163.com",
+      "password": "your_password"
+    },
+    "sender": {
+      "name": "你的真实名字",
+      "email": "your_real_email@163.com"
+    },
+    "recipients": [
+      {
+        "name": "张森",
+        "email": "zhangsan_real@example.com"
+      },
+      {
+        "name": "李四",
+        "email": "lisi_real@example.com"
+      }
+    ]
+  }
+}

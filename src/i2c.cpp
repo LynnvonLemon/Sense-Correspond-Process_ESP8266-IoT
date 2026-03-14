@@ -10,18 +10,18 @@ int scanI2CDevices() { // 扫描I2C设备并返回设备数量
   byte error, address;
   int nDevice = 0;
 
-  for(address = 0x01; address <= 0x7f; ++address){
+  for (address = 0x01; address <= 0x7f; ++address){
     Wire.beginTransmission(address);
     error = Wire.endTransmission();
-    if(error == 0){
+    if (error == 0) {
       Serial.printf("0x%02X\n", address);
       ++nDevice;
-    }else if(error != 2){
+    }else if (error != 2) {
       Serial.printf("Error at address 0x%02X: %d\n", address, error);
     }
   }
 
-  if(nDevice == 0){
+  if (nDevice == 0) {
     Serial.println("No I2C devices found");
   }
   return nDevice;

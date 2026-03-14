@@ -9,8 +9,7 @@ int f(int& value) { // 对传感器值进行处理
   return map(value, 0, 1023, 0, 100); // 将传感器值映射到0-100范围
 }
 
-int recordData() {// 读取传感器值并进行处理
+int getData() {  // 读取传感器值并进行处理
   int sensorValue = analogRead(SENSOR_PIN);
-  sensorValue = f(sensorValue);
-  return sensorValue;
-} 
+  return f(sensorValue);
+}
